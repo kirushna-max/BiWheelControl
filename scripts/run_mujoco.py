@@ -2,7 +2,7 @@ import mujoco
 import mujoco.viewer
 import time
 
-path = 'Bipedal/urdf/Bipedal.xml'
+path = '../assets/urdf/Bipedal.xml'
 model = mujoco.MjModel.from_xml_path(path)
 data = mujoco.MjData(model)
 
