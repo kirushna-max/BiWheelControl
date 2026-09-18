@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="Bipedal">
+  <compiler meshdir="." angle="radian"/>
+  <option gravity="0 0 -9.81" timestep="0.002"/>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1=".1 .2 .3"
+     rgb2=".2 .3 .4" width="300" height="300"/>
+    <material name="grid" texture="grid" texrepeat="8 8" reflectance=".2"/>
+    <mesh name="base_link" file="../meshes/base_link.STL"/>
+    <mesh name="Link_11" file="../meshes/Link_11.STL"/>
+    <mesh name="Link_12" file="../meshes/Link_12.STL"/>
+    <mesh name="Wheel_1" file="../meshes/Wheel_1.STL"/>
+    <mesh name="Link_21" file="../meshes/Link_21.STL"/>
+    <mesh name="Link_22" file="../meshes/Link_22.STL"/>
+    <mesh name="Wheel_2" file="../meshes/Wheel_2.STL"/>
+  </asset>
+  <worldbody>
+    <light name="top" pos="0 0 1"/>
+    <geom size="100 100 100" type="plane" material="grid"/>
+    <!-- Original spawn pose: <body name="base_link"> -->
+    <!-- Spawn the bot 10 cm above the ground; only the wheels may contact it. -->
+    <body name="base_link" pos="0 0 0.50" euler="1.5708 0 0">
+      <freejoint name="root_freejoint"/>
+      <inertial mass="3.63817086802306" pos="-1.64012214920461E-08 -0.0680186409737764 -1.39560096812374E-09" diaginertia="0.00737499625534443 0.0285025917062785 0.0281335662782507"/>
+      <geom name="base_link_visual" type="mesh" mesh="base_link" contype="1" conaffinity="1" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+      <body name="Link_11" pos="0.145 -0.11978 0" euler="0 0 0">
+        <!-- <joint name="Link_1_1" type="hinge" axis="1 0 0"/> -->
+        <inertial mass="0.101778101785284" pos="0.0130297428005102 -0.0336883205650267 -0.0670081864961882" diaginertia="0.000348668430458723 0.000275943650696075 7.901918490929E-05"/>
+        <geom name="Link_11_visual" type="mesh" mesh="Link_11" contype="0" conaffinity="0" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+        <body name="Link_12" pos="0 -0.067377 -0.13402" euler="0 0 0">
+          <!-- <joint name="Link_1_2" type="hinge" axis="1 0 0"/> -->
+          <inertial mass="0.101778101785284" pos="0.0330297428005104 -0.0471788439675457 0.0583022871068168" diaginertia="0.000348668430458728 0.000211913718802414 0.000143049116802955"/>
+          <geom name="Link_12_visual" type="mesh" mesh="Link_12" contype="0" conaffinity="0" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+          <body name="Wheel_1" pos="0.005 -0.094358 0.1166" euler="0 0 0">
+            <joint name="Wheel_1" type="hinge" axis="1 0 0"/>
+            <inertial mass="0.134990309333937" pos="0.00877272727272727 0 0" diaginertia="0.00018081798537202 9.41531143993749E-05 9.41531143993748E-05"/>
+            <geom name="Wheel_1_visual" type="mesh" mesh="Wheel_1" contype="1" conaffinity="1" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="Link_21" pos="-0.145 -0.11978 0" euler="0 0 0">
+        <!-- <joint name="Link_2_1" type="hinge" axis="1 0 0"/> -->
+        <inertial mass="0.101778101785284" pos="-0.0130297428005103 -0.033688320565027 -0.0670081864961878" diaginertia="0.000348668430458732 0.000275943650696072 7.90191849093019E-05"/>
+        <geom name="Link_21_visual" type="mesh" mesh="Link_21" contype="0" conaffinity="0" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+        <body name="Link_22" pos="0 -0.067377 -0.13402" euler="0 0 0">
+          <!-- <joint name="Link_2_2" type="hinge" axis="1 0 0"/> -->
+          <inertial mass="0.101778101785284" pos="-0.0330297428005104 -0.0471788439675451 0.0583022871068164" diaginertia="0.000348668430458713 0.000211913718802399 0.000143049116802956"/>
+          <geom name="Link_22_visual" type="mesh" mesh="Link_22" contype="0" conaffinity="0" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+          <body name="Wheel_2" pos="-0.005 -0.094358 0.1166" euler="0 0 0">
+            <joint name="Wheel_2" type="hinge" axis="1 0 0"/>
+            <inertial mass="0.134990309333937" pos="-0.00877272727272727 0 -2.22044604925031E-16" diaginertia="0.00018081798537202 9.41531143993749E-05 9.41531143993748E-05"/>
+            <geom name="Wheel_2_visual" type="mesh" mesh="Wheel_2" contype="1" conaffinity="1" pos="0 0 0" euler="0 0 0" rgba="0.894117647058823 0.894117647058823 0.894117647058823 1"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <actuator>
+    <!--
+    <velocity name="Link_1_1_velocity_limit" joint="Link_1_1" kv="1" ctrlrange="-1 1" ctrllimited="true"/>
+    <velocity name="Link_1_2_velocity_limit" joint="Link_1_2" kv="1" ctrlrange="-1 1" ctrllimited="true"/>
+    <velocity name="Link_2_1_velocity_limit" joint="Link_2_1" kv="1" ctrlrange="-1 1" ctrllimited="true"/>
+    <velocity name="Link_2_2_velocity_limit" joint="Link_2_2" kv="1" ctrlrange="-1 1" ctrllimited="true"/>
+    -->
+  </actuator>
+</mujoco>
