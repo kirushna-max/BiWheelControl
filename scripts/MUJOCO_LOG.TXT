@@ -1,0 +1,52 @@
+WARNING Fri Sep 18 17:28:04 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 18:27:50 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:14:52 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:14:52 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:15:12 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:15:12 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:15:13 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:15:13 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:15:13 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:17:22 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:17:23 2026: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0980.
+
+WARNING Fri Sep 18 21:22:27 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:22:27 2026: Nan, Inf or huge value in QACC at DOF 7. The simulation is unstable. Time = 0.0960.
+
+WARNING Fri Sep 18 21:24:52 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:24:52 2026: Nan, Inf or huge value in QACC at DOF 6. The simulation is unstable. Time = 0.0960.
+
+WARNING Fri Sep 18 21:26:15 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:37:10 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:47:03 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 21:59:59 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:01:41 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:02:26 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:02:57 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:03:45 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:04:27 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:08:00 2026: OpenGL error 0x502 in or before mjr_makeContext
+
+WARNING Fri Sep 18 22:09:16 2026: OpenGL error 0x502 in or before mjr_makeContext
+
